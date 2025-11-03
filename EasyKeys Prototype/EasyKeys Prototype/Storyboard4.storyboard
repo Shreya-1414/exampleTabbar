@@ -8,17 +8,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Storyboard4 View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="Storyboard4ViewController" customModule="EasyKeys_Prototype" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qL-3L-1FC">
+                                <rect key="frame" x="30" y="325" width="333" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PD-TS-W4F">
+                                <rect key="frame" x="169" y="451" width="55" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add"/>
+                                <connections>
+                                    <action selector="add:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mSz-bU-tYv"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bjY-KX-hN0">
+                                <rect key="frame" x="30" y="260" width="333" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bjY-KX-hN0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="88" id="7f3-ws-M8R"/>
+                            <constraint firstItem="6qL-3L-1FC" firstAttribute="top" secondItem="bjY-KX-hN0" secondAttribute="bottom" constant="31" id="DwC-rb-k1L"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6qL-3L-1FC" secondAttribute="trailing" constant="30" id="VkQ-3r-nzb"/>
+                            <constraint firstItem="bjY-KX-hN0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="VxZ-Kb-YWd"/>
+                            <constraint firstItem="6qL-3L-1FC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="a5k-nU-zdw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bjY-KX-hN0" secondAttribute="trailing" constant="30" id="bCy-ve-Wb8"/>
+                            <constraint firstItem="bjY-KX-hN0" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gOQ-fB-Hzm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="1PD-TS-W4F" secondAttribute="bottom" constant="249" id="jg5-Pd-Gy6"/>
+                            <constraint firstItem="1PD-TS-W4F" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="lvn-vv-13l"/>
+                            <constraint firstItem="6qL-3L-1FC" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="oB9-l2-vgx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZhA-3h-tqd"/>
+                    <connections>
+                        <outlet property="label" destination="6qL-3L-1FC" id="wcn-Rp-RRi"/>
+                        <outlet property="textfield" destination="bjY-KX-hN0" id="PgM-Ev-biz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
